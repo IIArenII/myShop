@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import { GiShoppingBag } from "react-icons/gi";
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const Navbar = () => {
+  const [totalQ, setTotalQ] = useState(0);
+  const carts = useSelector(store => store.cart.items);
+  useEffect(() => {
+    let total = 0;
+    carts.forEach(item => total += item.quantity);
+    setTotalQ(total)
+  }, [carts])
+
   return (
     <div className='flex justify-around items-center h-16 w-full bg-slate-800 text-white'>
         <div className="logo">
@@ -17,7 +27,7 @@ const Navbar = () => {
         </div>
         <div className='flex justify-center items-center bg-white rounded-full cursor-pointer relative'>
           <GiShoppingBag className='w-8 h-8 text-gray-900 p-1' />
-          <span className='flex justify-center items-center absolute top-2/3 -left-1  bg-red-600 w-4 h-4 text-white rounded-full '>0</span>
+          <span className='flex justify-center items-center absolute top-2/3 -left-1  bg-red-600 w-4 h-4 text-white rounded-full '>{totalQ}</span>
         </div>
     </div>
   )

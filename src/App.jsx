@@ -7,6 +7,7 @@ import AllProducts from './pages/AllProducts'
 import ProductDetails from './pages/ProductDetails'
 import React,{ useEffect, useState } from 'react'
 import {fetchProducts} from './products/products'
+import CartTab from './pages/CartTab'
 
 function App() {
 
@@ -41,6 +42,10 @@ function App() {
           path: "/:productId",
           element: <ProductDetails products={products} />
         },
+        {
+          path: "/",
+          element: <CartTab products={products} />
+        }
       ]
     }
   ])

@@ -17,7 +17,9 @@ const cartSlice = createSlice({
                 state.items.push({productId, quantity});
             }
             
-        }
+        },
+        
+
     }
 })
 export const {addToCart} = cartSlice.actions;

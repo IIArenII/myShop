@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import {useSelector, useDispatch} from 'react-redux';
 import Button from '@mui/material/Button';
@@ -6,7 +6,8 @@ import { addToCart } from '../stores/cart';
 
 
 
-const ProductDetails = ({products}) => { 
+const ProductDetails = ({products}) => {
+    const [quantity, setQuantity] = useState(1);
     const { productId } = useParams();
     const carts = useSelector((store) => store.cart.items);
     console.log(carts)
@@ -20,8 +21,14 @@ const ProductDetails = ({products}) => {
     const handleAddToCart = () => {
       dispatch(addToCart({
         productId: product.id,
-        quantity: 1
+        quantity: quantity
       }));
+    }
+    const handleMinusQ = () => {
+      setQuantity(quantity - 1 < 1 ? 1 : quantity - 1 );
+    }
+    const handlePlusQ = () => {
+      setQuantity(quantity + 1 > 10 ? 10 : quantity + 1);
     }
 
   return (
@@ -33,6 +40,12 @@ const ProductDetails = ({products}) => {
           <h2 className='text-xl font-semibold'>{product.title}</h2>
           <p className='text-gray-600 mt-5'>{product.description}</p>
           <p className='text-gray-900 mt-10 mb-5 font-bold text-3xl'>${product.price}</p>
+
+          <div className='flex justify-start items-center my-5 gap-3'>
+            <button className='bg-gray-50 p-3 rounded-full' onClick={handleMinusQ}>-</button>
+            <span className=' p-3 rounded-full'>{quantity}</span>
+            <button className='bg-gray-50 p-3 rounded-full' onClick={handlePlusQ}>+</button>
+          </div>
           <Button variant="contained" size="medium" 
           onClick={handleAddToCart}>
           Add to Cart
