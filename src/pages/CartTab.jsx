@@ -20,10 +20,13 @@ const CartTab = ({products}) => {
         ${isCartTabOpen ? "" : "translate-x-full"}
         `}>
         <h2 className='flex items-center justify-center font-semibold font-sans text-white text-2xl'>SHOPPİNG CART</h2>
-       
         <div>
             {carts.map((item, key) =>
-            <CartItem key={key} item={item} />
+                <CartItem 
+                key={key}
+                data={item}
+                products={products}
+            />
             )}
 
         </div>

@@ -43,7 +43,7 @@ function App() {
           element: <ProductDetails products={products} />
         },
         {
-          path: "/",
+          path: "/cart",
           element: <CartTab products={products} />
         }
       ]
