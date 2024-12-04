@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -9,6 +10,9 @@ const Footer = () => {
         <div className="flex justify-center gap-4">
           <a href="https://www.linkedin.com/in/abdullah-eren-evli-a62b932b7/" target="_blank" className="hover:text-gray-400 transition">
           <FaLinkedin className='w-7 h-7 '/> 
+          </a>
+          <a href="https://github.com/IIArenII" target="_blank" className="hover:text-gray-400 transition">
+          <FaGithub className='w-7 h-7 '/> 
           </a>
           <p className="hover:text-gray-400 transition">
             created by ~ Abdullah Eren
