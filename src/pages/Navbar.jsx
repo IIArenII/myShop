@@ -13,8 +13,6 @@ const Navbar = () => {
   const openCart = () => {
     dispatch(openCartTab());
   }
-    
-  
 
   useEffect(() => {
     let total = 0;
@@ -26,7 +24,8 @@ const Navbar = () => {
     <div className='flex justify-around items-center h-16 w-full bg-slate-800 text-white'>
         <div className="logo">
             <Link to="/">
-                myShop
+
+              <p className='text-2xl font-sans font-semibold'>my<span className='text-2xl font-sans font-semibold text-yellow-500'>Shop</span></p>   
             </Link>                
         </div>
         <div className='flex gap-5'>
