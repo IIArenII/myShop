@@ -9,15 +9,15 @@ import { addToCart } from '../stores/cart';
 const ProductDetails = ({products}) => {
     const [quantity, setQuantity] = useState(1);
     const { productId } = useParams();
-    const carts = useSelector((store) => store.cart.items);
-    console.log(carts)
+   
     const dispatch = useDispatch();
   
     const product = products.find((p) => p.id === parseInt(productId));
   
     if (!product) {
-      return <p>Product not found.</p>;
+      return <p>Product Loading or not found</p>;
     }
+    
     const handleAddToCart = () => {
       dispatch(addToCart({
         productId: product.id,
