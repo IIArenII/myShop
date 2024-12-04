@@ -19,6 +19,15 @@ const cartSlice = createSlice({
             }
             
         },
+        changeQ(state, action){
+            const {productId, quantity} = action.payload;
+            const indexProductId = state.items.findIndex(item => item.productId === productId);
+            if (quantity > 0){
+                state.items[indexProductId].quantity = quantity;
+            }else{
+                state.items = state.items.filter(item => item.productId !== productId)
+            }
+        },
         openCartTab(state) {
             state.cartTab = !state.cartTab;
         } 
@@ -26,5 +35,5 @@ const cartSlice = createSlice({
 
     }
 })
-export const {addToCart, openCartTab} = cartSlice.actions;
+export const {addToCart, openCartTab, changeQ} = cartSlice.actions;
 export default cartSlice.reducer;
