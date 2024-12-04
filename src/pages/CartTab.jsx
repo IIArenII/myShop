@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react' 
 import { useSelector, useDispatch } from 'react-redux' 
-import CartItem from './cartItem';
+import CartItem from './CartItem';
 import { openCartTab } from '../stores/cart';
 import {fetchProducts} from '../products/products'
 
