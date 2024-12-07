@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import CartItem from "./CartItem";
-import { openCartTab } from "../stores/cart";
-import { fetchProducts } from "../products/products";
+import React, { useEffect, useState } from 'react' 
+import { useSelector, useDispatch } from 'react-redux' 
+import CartItem from './cartItem';
+import { openCartTab } from '../stores/cart';
+import {fetchProducts} from '../products/products'
+
 
 const CartTab = ({}) => {
   const [products, setProducts] = useState([]);
@@ -53,3 +54,5 @@ const CartTab = ({}) => {
 };
 
 export default CartTab;
+
+export default CartTab
