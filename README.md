@@ -25,3 +25,9 @@ Tailwind CSS: A utility-first CSS framework for fast and responsive styling.
 React Router: Used for client-side routing and navigation between pages.
 
 Axios/Fetch: For making API requests to fetch products from a server (if applicable).
+<<<<<<< HEAD
+=======
+
+### Link to view the site : https://e-commerce-web123321.netlify.app/
+
+>>>>>>> c34f2abb80210b4ad22d7b919328ea64807608b3
