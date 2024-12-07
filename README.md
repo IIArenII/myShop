@@ -26,5 +26,5 @@ React Router: Used for client-side routing and navigation between pages.
 
 Axios/Fetch: For making API requests to fetch products from a server (if applicable).
 
-### Link to view the site : https://67505b28c5e68126f4d81fdb--cheerful-lily-eab334.netlify.app/
+### Link to view the site : https://e-commerce-web123321.netlify.app/
 
