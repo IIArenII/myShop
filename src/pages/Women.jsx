@@ -12,7 +12,7 @@ const Women = ({products}) => {
       <h1 className='text-slate-900 font-sans font-extrabold text-center text-5xl py-12 tracking-tight'>Our Products</h1>
       
        
-      <ul className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex-grow gap-10 p-8'>
+      <ul className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 flex-grow gap-10 p-8'>
         {womensProducts.map((product) => (
           <Link key={product.id} to={`/${product.id}`}>
             <li className='bg-white border border-gray-200 rounded-3xl shadow-md hover:shadow-xl  duration-300 
