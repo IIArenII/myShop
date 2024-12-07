@@ -55,4 +55,3 @@ const CartTab = ({}) => {
 
 export default CartTab;
 
-export default CartTab
