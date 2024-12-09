@@ -7,21 +7,13 @@ const Men = ({ products }) => {
   );
 
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col w-full min-h-screen gap-6 bg-gray-50  ">
-      <h1 className="text-slate-900 font-sans font-extrabold text-center text-5xl py-12 tracking-tight">
-        Our Products
-      </h1>
 
-      <ul className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 flex-grow gap-10 p-8">
-=======
     
     <div className='flex flex-col w-full min-h-screen gap-6 bg-gray-50  '>
       <h1 className='text-slate-900 font-sans font-extrabold text-center text-5xl py-12 tracking-tight'>Our Products</h1>
       
        
       <ul className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 flex-grow gap-10 p-8'>
->>>>>>> c34f2abb80210b4ad22d7b919328ea64807608b3
         {mensProducts.map((product) => (
           <Link key={product.id} to={`/${product.id}`}>
             <li
@@ -53,9 +45,7 @@ const Men = ({ products }) => {
   );
 };
 
-<<<<<<< HEAD
-export default Men;
-=======
 
-export default Men
->>>>>>> c34f2abb80210b4ad22d7b919328ea64807608b3
+export default Men;
+
+
