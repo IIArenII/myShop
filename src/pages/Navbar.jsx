@@ -59,11 +59,11 @@ const Navbar = ({products}) => {
             placeholder="Search products..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="px-2 h-8 w-60 md:w-full text-black border border-gray-300 rounded shadow focus:outline-none focus:ring focus:ring-indigo-500"
+            className="px-2 h-8 w-40 md:w-full text-black border border-gray-300 rounded shadow focus:outline-none focus:ring focus:ring-indigo-500"
           />
 
           {searchTerm && filteredProducts.length > 0 && (
-            <div className="absolute top-12 left-0 bg-gray-300 border border-gray-300 rounded shadow w-52 z-50">
+            <div className="absolute top-12 left-0 bg-gray-300 border border-gray-300 rounded shadow w-40 md:w-full z-50">
               {filteredProducts.map((product) => (
                 <Link key={product.id} to={`/${product.id}`} onClick={(e) => setSearchTerm('')}>
                 <div
